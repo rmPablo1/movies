@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect } from "react"
-import { fetchMovie } from '../store'
+import { fetchMovies } from '../store'
 import {useSelector, useDispatch } from "react-redux"
 import { changeTerm } from '../store'
 function Searchbar() {
@@ -41,7 +41,7 @@ function Searchbar() {
     event.preventDefault()
     if (searchTerm === previousMovie.current) return
       previousMovie.current = searchTerm
-      dispatch(fetchMovie(searchTerm))
+      dispatch(fetchMovies(searchTerm))
       dispatch(changeTerm(''))
   }
 

@@ -49,6 +49,123 @@ body{
   border-radius: 8px;
 }
 
+.background-modal{
+  position:fixed;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(150,150,150,0.8);
+}
+.inside-modal{
+  position:fixed;
+  top:20%;
+  left:20%;
+  right: 20%;
+  bottom: 20%;
+  background-color: #202B38;
+  border-radius: 8px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.inside-modal img{
+  align-self: center;
+}
+.inside-modal-description{
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items:start;
+  margin-top:50px;
+  margin-left:30px;
+  color: white;
+}
+
+.description{
+  max-width: 70%;
+}
+
+.description span{
+  color: cyan;
+  font-weight: 900;
+
+}
+
+.image-modal{
+  margin-left:30px;
+}
+
+.button-modal{
+  background-color: transparent;
+  color:white;
+  font-size: 30px;
+  align-self: end;
+  justify-self: end;
+  margin-right:30px;
+  font-weight: 600;
+  border:none;
+}
+
+.modal-hidden{
+  overflow:hidden;
+}
+
+@media (max-width: 1360px){
+  .inside-modal{
+    top:15%;
+    left:15%;
+    right: 15%;
+    bottom: 15%;
+  }
+  .inside-modal-description{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px){
+  .input{
+    width:100%;
+  }
+  .inside-modal{
+    margin:0;
+  }
+  .inside-modal-description{
+    margin: 0;
+    margin-left: 10px;
+    overflow-y: scroll;
+  }
+  .description{
+    max-width:80%;
+  }
+
+}
+
+@media (max-width: 850px){
+  .inside-modal{
+    flex-direction: column;
+    top:2%;
+    bottom:2%;
+    left:5%;
+    right:5%;
+  }
+
+  .image-modal{
+    margin:0;
+    padding:10px;
+    height:350px;
+    width:90%;
+  }
+}
+
+@media (max-width: 380px){
+  .container{
+    width:100%;
+  }
+  .input{
+    width:90%;
+  }
+}
 .lds-roller {
   display: inline-block;
   position: relative;

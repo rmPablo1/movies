@@ -9,12 +9,12 @@ function MovieList() {
 
 
   const renderMovies = data?.map((movie) => {
-    return <MovieShow movie={movie} />
+    return <MovieShow key={movie.imdbID} movie={movie} />
   })
 
   let content = renderMovies;
   if (isLoading){
-    content = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    content = <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   }
 
   return (
