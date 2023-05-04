@@ -17,11 +17,7 @@ function MovieList() {
   if (isLoading){
     content = <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   }
-
-  if (data.length === 0){
-    content = "No movies found"
-  }
-
+  
   return (
     <div className="moviegrid">{content}</div>
   )
