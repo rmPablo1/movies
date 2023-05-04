@@ -50,7 +50,7 @@ function Searchbar() {
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
-        <input className="input" value={searchTerm} onChange={handleChange}/>
+        <input placeholder="Avengers, Batman..."className="input" value={searchTerm} onChange={handleChange}/>
         {error && <p className="error"style={{color: "red"}}>{error}</p>}
       </form>
     </div>
