@@ -20,13 +20,11 @@ const moviesSlice = createSlice({
       state.isLoading = true
     })
     builder.addCase(fetchMovies.fulfilled, (state, action) =>{
-      console.log("hi",action.payload)
       state.data = action.payload
       state.isLoading = false
     })
     builder.addCase(fetchMovies.rejected, (state, action) => {
       state.isLoading = false
-      console.log(action.error)
       state.error = action.error
     })
   }
