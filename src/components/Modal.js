@@ -3,7 +3,6 @@ import React from 'react'
 import noImage from "../assets/noimage.png"
 import {useEffect} from "react"
 function Modal({movie, data, onClose}) {
-  console.log(data)
   useEffect(()=>{
     document.body.classList.add("modal-hidden")
 
