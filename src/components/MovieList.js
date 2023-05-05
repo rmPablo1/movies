@@ -6,8 +6,6 @@ function MovieList() {
     return state.movies
   })
 
-
-
   const renderMovies = data?.map((movie) => {
     return <MovieShow movie={movie} />
   })
