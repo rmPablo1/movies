@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect } from "react"
-import { fetchMovie } from '../store'
+import { fetchMovies } from '../store'
 import {useSelector, useDispatch } from "react-redux"
 import { changeTerm } from '../store'
 function Searchbar() {
@@ -41,7 +41,7 @@ function Searchbar() {
     event.preventDefault()
     if (searchTerm === previousMovie.current) return
       previousMovie.current = searchTerm
-      dispatch(fetchMovie(searchTerm))
+      dispatch(fetchMovies(searchTerm))
       dispatch(changeTerm(''))
   }
 
@@ -50,7 +50,7 @@ function Searchbar() {
   return (
     <div>
       <form className="form" onSubmit={handleSubmit}>
-        <input className="input" value={searchTerm} onChange={handleChange}/>
+        <input placeholder="Avengers, Batman... "className="input" value={searchTerm} onChange={handleChange}/>
         {error && <p className="error"style={{color: "red"}}>{error}</p>}
       </form>
     </div>
